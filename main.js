@@ -146,7 +146,7 @@ function update() {
 }
 
 function detectWinLoss() {
-    if (player.x > width || player.y > height || player.x < 0 || player.y < 0) {
+    if (player.x >= width || player.y >= height || player.x < 0 || player.y < 0) {
         console.log("Player moved out of bounds. Stopping the game.");
         running = false; // Stop the game loop
         displayLostMessage("You moved out of bounds! Game Over.");
